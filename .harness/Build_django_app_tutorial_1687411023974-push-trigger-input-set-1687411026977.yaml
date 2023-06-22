@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_django_app_tutorial_1687411023974-push-trigger-input-set
+  identifier: Build_django_app_tutorial_1687411023974pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: PythonCI
+  pipeline:
+    identifier: Build_django_app_tutorial_1687411023974
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
