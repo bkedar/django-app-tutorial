@@ -26,8 +26,20 @@ pipeline:
                       dry_run: "true"
                       repo: hello/world
                       tags: latest
+                    connectorRef: account.harnessImage
+                    imagePullPolicy: IfNotPresent
                   timeout: ""
                   type: Plugin
+              - step:
+                  type: Run
+                  name: Run_BuildCommandForPython
+                  identifier: Run_BuildCommandForPython
+                  spec:
+                    shell: Sh
+                    command: |-
+                      pip install Django
+                      pip install virtualenv
+                      python manage.py test
           platform:
             arch: Amd64
             os: Linux
