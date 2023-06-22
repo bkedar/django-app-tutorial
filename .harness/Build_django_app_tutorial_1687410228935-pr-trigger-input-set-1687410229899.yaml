@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_django_app_tutorial_1687410228935-pr-trigger-input-set
+  identifier: Build_django_app_tutorial_1687410228935prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: PythonAppCI
+  pipeline:
+    identifier: Build_django_app_tutorial_1687410228935
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
